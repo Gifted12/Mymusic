@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="shortcut icon"
+      href="./Media/—Pngtree—studio headphones_16402612.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>R-music</title>
+  </head>
+  <body >
+    <div
+    class="display_nameonplay flex justify-center items-center px-5 shadow-sm shadow-[#DBD3D3] bg-[#091057] h-9 cursor-pointer font-bold fixed top-0  text-[#DBD3D3] text-sm bg-#024CAA bold w-full  text-center text-nowrap overflow-hidden  sm:hidden"
+  >
+  </div>
+    <section
+      class="h-[100vh] w-full sm:h-[90vh] first_section  bg-[#091057]  bg-cover bg-center bg-no-repeat flex flex-col p-2 pt-16 sm:pt-6 gap-2"
+    ></section>
+    <section class="h-[11vh] sm:h-[10vh] fixed bottom-0 w-full">
+      <div class="h-full bg-[#024CAA] flex items-center flex-col-reverse sm:flex-row">
+        <div
+          class="imagediv flex bg-[#024CAA] sm:bg-[#DBD3D3] mr-5 p-5 gap-5 w-2/6 h-full justify-center items-center"
+        >
+          <img
+            class="backward rotate-180 w-9 h-9 rounded-lg cursor-pointer "
+            src="./Media/forward.svg"
+            alt=""
+          />
+          <img
+            class="play w-9 h-9  cursor-pointer rounded-lg"
+            src="./Media/play-circle.svg"
+            alt=""
+          />
+          <img
+            class="pause  w-9 h-9 cursor-pointer rounded-lg hidden"
+            src="./Media/pause-circle.svg"
+            alt=""
+          />
+          <img
+            class="forward  w-9 h-9 cursor-pointer rounded-lg"
+            src="./Media/forward.svg"
+            alt=""
+          />
+        </div>
+        <audio class="bg-red-500" src="" type="audio/mp3"></audio>
+        <div
+          class="player_control px-2 text-cyan-200 flex flex-col mx-auto justify-stretch align-middle items-center gap-1.5 align-middle"
+        >
+          <div class="progress-container w-[100vw] max-w-lg mx-auto">
+            <div class="flex items-center gap-2">
+              <span class="current-time font-bold text-[#DBD3D3] text-xs">0:00</span>
+              <div
+                class="progress-bar w-[80vw] sm:w-full h-2 bg-white  rounded-full cursor-pointer"
+              >
+                <div
+                  class="progress-fill h-full w-0 bg-[#EC8305] rounded-full"
+                ></div>
+              </div>
+              <span class="duration font-bold text-[#DBD3D3] text-xs">0:00</span>
+            </div>
+          </div>
+          <!-- ///////////////////////// -->
+          <div
+            class="display_nameonplay2  px-5 mx-2 cursor-pointer font-bold  text-[#DBD3D3] text-sm bg-#024CAA bold w-full h-fit text-nowrap overflow-hidden hidden sm:flex sm:justify-center sm:items-center"
+          >
+            
+          </div>
+          <div
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <script src="./myMusics.js" type="module"></script>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
+
+    <!-- @apply relative animate-myAnimation duration[5s] ease-linear delay-[2s] infinite alrernate  -->
+
+    <!-- @keyframes example {
+    0%   { right:100%; top:0px;}
+  
+    100% {right:-100%; top:0px;}
+  }   -->
