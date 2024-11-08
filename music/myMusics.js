@@ -3,32 +3,39 @@ const myMusics = [
     {
         song:'./songs/Boy_Spyce_-_Pepe.mp3',
         name:'pepe',
-        artist:'boy_spyce',
-        image:'./Media/—Pngtree—high-end black headphones on a_15340130.png'
+        artist:'Boy_Spyce',
+        image:'./Media/boy-spyce.jpg'
     },
     {
         song:'./songs/Boy-Spyce-Folake-(TrendyBeatz.com).mp3',
         name:'Folake',
-        artist:'boy_spyce',
-        image:'./Media/—Pngtree—high-end black headphones on a_15340130.png'
+        artist:'Boy_Spyce',
+        image:'./Media/boy-spyce2.jpg'
     },
     {
         song:'./songs/Burna-Boy-Higher-(TrendyBeatz.com).mp3',
         name:'Higher',
-        artist:'burner boy',
-        image:'./Media/—Pngtree—studio headphones_16402612.png'
+        artist:'Burna-Boy',
+        image:'./Media/Burna Boy ♡ (3).jpg'
     },
     {
         song:'./songs/Camila_Cabello_-_Havana_(Audio)_ft._Young_Thug.mp3',
         name:'havana',
-        artist:'camila cabello',
-        image:'./Media/—Pngtree—high-end black headphones on a_15340130.png'
+        artist:'Camila_Cabello',
+        image:'./Media/camila cabello make up.jpg'
     },
+    {
+        song:'./songs/Omah_Lay_-_Movingg.mp3',
+        name:'Movingg',
+        artist:'Omah_Lay',
+        image:'./Media/Omah Lay’s “Boy Alone” Deluxe edition is the first….jpg'
+    },
+    ,
     {
         song:'./songs/Camila_Cabello_-_My_Oh_My_talkglitz.tv.mp3',
         name:'My_oh_my',
-        artist:'camela cabello',
-        image:'./Media/—Pngtree—studio headphones_16402612.png'
+        artist:'Camila_Cabello',
+        image:'./Media/camila cabello make up.jpg'
     }
 ]
 // console.log(myMusics);

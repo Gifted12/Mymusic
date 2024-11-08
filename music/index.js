@@ -11,6 +11,7 @@ const progressBar = document.querySelector('.progress-bar');
 const progressFill = document.querySelector('.progress-fill');
 const currentTimeDisplay = document.querySelector('.current-time');
 const durationDisplay = document.querySelector('.duration');
+const tumbnail_img = document.querySelector('.tumbnail_img') ;
 const theArray = musiclist.myMusics;
 
 const audioPlayer = new Audio();
@@ -49,8 +50,11 @@ const playSong = (e) => {
 
     play.classList.add('hidden');
     pause.classList.remove('hidden');
+    tumbnail_img.src = song.image;
     displayName.textContent = `${song.name} { ${song.artist} }`;
     displayName2.textContent = `${song.name} { ${song.artist} }`;
+    
+    console.log(tumbnail_img.src);
     const allSongs = document.querySelectorAll('.songwrapper');
 
     allSongs.forEach((songDiv, i) => {
@@ -95,7 +99,7 @@ const createSongElement = (song, index) => {
     // const songWrapper = document.createElement('div');
     // songWrapper.className = "songwrapper navdiv bg-[#DBD3D3] text-[#091057] rounded-md align-middle flex gap-5 items-center px-3 py-[0.15rem] hover:text-[#DBD3D3] cursor-pointer hover:bg-[#024CAA] transition-colors";
     const songWrapper = document.createElement('div');
-    songWrapper.className = "songwrapper navdiv bg-purple-200 rounded-md align-middle flex gap-5 items-center px-3 py-[0.15rem] cursor-pointer hover:text-[#DBD3D3] hover:bg-[#024CAA]  transition-colors";
+    songWrapper.className = "songwrapper navdiv bg-purple-200 hidden rounded-md align-middle sm:flex gap-5 items-center px-3 py-[0.15rem] cursor-pointer hover:text-[#DBD3D3] hover:bg-[#024CAA]  transition-colors";
     
     const img = document.createElement('img');
     img.className = " bg-green-400 rounded-2xl w-11 h-11";
