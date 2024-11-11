@@ -11,7 +11,10 @@ const progressBar = document.querySelector('.progress-bar');
 const progressFill = document.querySelector('.progress-fill');
 const currentTimeDisplay = document.querySelector('.current-time');
 const durationDisplay = document.querySelector('.duration');
+const tumbnail = document.querySelector('.tumbnail');
 const tumbnail_img = document.querySelector('.tumbnail_img') ;
+const menuclosed = document.querySelector('.menuclosed');
+const menuopen = document.querySelector('.menuopen');
 const theArray = musiclist.myMusics;
 
 const audioPlayer = new Audio();
@@ -61,12 +64,18 @@ const playSong = (e) => {
         if (i === e) {
             songDiv.classList.add('bg-[#024CAA]');
             songDiv.classList.add('text-[#DBD3D3]');
-            songDiv.classList.remove('bg-purple-200');
+            songDiv.classList.remove('bg-[#DBD3D3]');
+            first_section.classList.remove('flex');
+            first_section.classList.add('hidden');
+            tumbnail.classList.remove('hidden');
+            tumbnail.classList.add('flex');
+            menuclosed.classList.add('hidden')
+            menuopen.classList.remove('hidden');
             
         } else {
-            songDiv.classList.remove('bg-purple-300');
+            songDiv.classList.remove('bg-[#024CAA]');
             songDiv.classList.remove('text-[#DBD3D3]');
-            songDiv.classList.add('bg-purple-200');
+            songDiv.classList.add('bg-[#DBD3D3]');
         }
     });
 };
@@ -99,7 +108,7 @@ const createSongElement = (song, index) => {
     // const songWrapper = document.createElement('div');
     // songWrapper.className = "songwrapper navdiv bg-[#DBD3D3] text-[#091057] rounded-md align-middle flex gap-5 items-center px-3 py-[0.15rem] hover:text-[#DBD3D3] cursor-pointer hover:bg-[#024CAA] transition-colors";
     const songWrapper = document.createElement('div');
-    songWrapper.className = "songwrapper navdiv bg-purple-200 hidden rounded-md align-middle sm:flex gap-5 items-center px-3 py-[0.15rem] cursor-pointer hover:text-[#DBD3D3] hover:bg-[#024CAA]  transition-colors";
+    songWrapper.className = "songwrapper navdiv bg-[#DBD3D3] flex rounded-md align-middle sm:flex gap-5 items-center px-3 py-[0.15rem] cursor-pointer hover:text-[#DBD3D3] hover:bg-[#024CAA]  transition-colors";
     
     const img = document.createElement('img');
     img.className = " bg-green-400 rounded-2xl w-11 h-11";
@@ -145,6 +154,23 @@ audioPlayer.addEventListener('ended', playNext);
 progressBar.addEventListener('click', seekTo); 
 audioPlayer.addEventListener('timeupdate', updateProgress);
 audioPlayer.addEventListener('loadedmetadata', updateProgress);
+menuopen.addEventListener('click', ()=>{
+    first_section.classList.add('flex');
+    first_section.classList.remove('hidden');
+    tumbnail.classList.add('hidden');
+    tumbnail.classList.remove('flex');
+    menuclosed.classList.remove('hidden');
+    menuopen.classList.add('hidden');
+});
+menuclosed.addEventListener('click', ()=>{
+    first_section.classList.remove('flex');
+    first_section.classList.add('hidden');
+    tumbnail.classList.remove('hidden');
+    tumbnail.classList.add('flex');
+    menuclosed.classList.add('hidden')
+    menuopen.classList.remove('hidden');
+});
+
 
 progressBar.addEventListener('mousedown', () => {
     isDragging = true;

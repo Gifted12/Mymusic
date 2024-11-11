@@ -30,7 +30,6 @@ const myMusics = [
         artist:'Omah_Lay',
         image:'./Media/Omah Lay’s “Boy Alone” Deluxe edition is the first….jpg'
     },
-    ,
     {
         song:'./songs/Camila_Cabello_-_My_Oh_My_talkglitz.tv.mp3',
         name:'My_oh_my',
